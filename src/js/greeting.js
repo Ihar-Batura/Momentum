@@ -6,7 +6,7 @@ export function showGreeting() {
   setTimeout(showGreeting, 1000)
 }
 
-function getTimeOfDay() {
+export function getTimeOfDay() {
   const date = new Date()
   const hours = date.getHours()
   if (hours >= 0 && hours <= 11) {
