@@ -1,3 +1,5 @@
+import { showGreeting } from './greeting.js'
+
 const time = document.querySelector('.time')
 const calendar = document.querySelector('.date')
 
@@ -6,11 +8,12 @@ export function showTime() {
   const currentTime = date.toLocaleTimeString()
   time.textContent = `${currentTime}`
   showDate()
+  showGreeting()
   setTimeout(showTime, 1000)
 }
 showTime()
 
-export function showDate() {
+function showDate() {
   const date = new Date()
   const options = {
     weekday: 'long',
@@ -20,4 +23,3 @@ export function showDate() {
   const currentDate = date.toLocaleDateString('en-US', options)
   calendar.textContent = `${currentDate}`
 }
-showDate()
