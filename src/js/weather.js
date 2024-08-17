@@ -7,6 +7,7 @@ async function getWeather(cityValue) {
   const result = await fetch(url)
   const data = await result.json()
 
+  weatherIcon.className = 'weather-icon owf'
   weatherIcon.classList.add(`owf-${data.weather[0].id}`)
   temperature.textContent = `${data.main.temp}°C`
   weatherDescription.textContent = data.weather[0].description

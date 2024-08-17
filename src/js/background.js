@@ -5,11 +5,11 @@ let randomNum
 
 //Cсылка на фоновое изображение формируется с учётом времени суток и случайного номера изображения
 
-function getRandomNum() {
-  let rand = 1 + Math.random() * (20 + 1 - 1)
+function getRandomNum(min, max) {
+  let rand = min + Math.random() * (max + 1 - min)
   randomNum = Math.floor(rand)
 }
-getRandomNum()
+getRandomNum(1, 20)
 
 function setBackground() {
   const img = new Image()
