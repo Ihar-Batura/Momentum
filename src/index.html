@@ -19,8 +19,10 @@
         <ul class="play-list"></ul>
       </div>
       <div class="weather">
-        <input type="text" class="city" />
+        <input type="text" class="city" onchange="getWeather(this.value)" />
         <i class="weather-icon owf"></i>
+        <div class="temperature"></div>
+        <div class="weather-description"></div>
         <div class="weather-error"></div>
         <div class="description-container">
           <span class="temperature"></span>
@@ -50,7 +52,9 @@
       </div>
     </footer>
     <script src="js/script.js" type="module"></script>
-    <script src="js/storage.js"></script>
+
     <script src="js/background.js" type="module"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/weather.js"></script>
   </body>
 </html>
