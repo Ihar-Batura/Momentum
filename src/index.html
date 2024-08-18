@@ -19,11 +19,16 @@
         <ul class="play-list"></ul>
       </div>
       <div class="weather">
-        <input type="text" class="city" onchange="getWeather(this.value)" />
+        <input
+          type="text"
+          class="city"
+          onchange="getWeather(this.value)"
+          placeholder="[Enter city]"
+        />
         <i class="weather-icon owf"></i>
         <div class="temperature"></div>
         <div class="weather-description"></div>
-        <div class="weather-error"></div>
+        <div class="weather-error">Error! Nothing to geocode for!</div>
         <div class="description-container">
           <span class="temperature"></span>
           <span class="weather-description"></span>
@@ -41,7 +46,7 @@
       <date class="date"></date>
       <div class="greeting-container">
         <span class="greeting"></span>
-        <input type="text" class="name" />
+        <input type="text" class="name" placeholder="[Enter name]" />
       </div>
     </main>
     <footer class="footer">
@@ -57,5 +62,6 @@
     <script src="js/weather.js"></script>
     <script src="js/quote.js"></script>
     <script src="js/audio.js" type="module"></script>
+    <script src="js/translation.js" type="module"></script>
   </body>
 </html>
