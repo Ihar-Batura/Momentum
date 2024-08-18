@@ -17,6 +17,7 @@ function getLocalStorage() {
 
   if (city.value !== null) {
     city.value = cityFromLS
+    getWeather(city.value) // показывает погоду для последнего города
   }
 }
 window.addEventListener('load', getLocalStorage) //перед загрузкой страницы (событие load) данные нужно восстановить и отобразить
