@@ -31,16 +31,62 @@ body {
   padding: 20px;
 }
 
+.player-controls__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
 .player-controls {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 120px;
-  margin-bottom: 28px;
+}
+
+.volume-container {
+  display: flex;
+  justify-content: center;
+  width: 90px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.volume-btn {
+  display: flex;
+  align-items: center;
+}
+
+.volume {
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: scale(0.7);
+}
+
+.icon-volume {
+  background-image: url(../assets/svg/volume.svg);
+}
+.icon-mute {
+  margin-top: 1px;
+  background-image: url(../assets/svg/mute.svg);
 }
 
 .play-list {
   text-align: left;
+  font-size: 25px;
+  opacity: 0.9;
+}
+
+.play-list > * {
+  font-size: 20px;
+  list-style: none;
+  margin-top: 5px;
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .play-item {

@@ -11,12 +11,26 @@
   <body>
     <header class="header">
       <div class="player">
-        <div class="player-controls">
-          <button class="play-prev player-icon"></button>
-          <button class="play player-icon"></button>
-          <button class="play-next player-icon"></button>
+        <div class="player-controls__container">
+          <div class="player-controls">
+            <button class="play-prev player-icon"></button>
+            <button class="play player-icon"></button>
+            <button class="play-next player-icon"></button>
+          </div>
+          <div class="volume-container">
+            <div class="volume-btn">
+              <div class="volume icon-volume"></div>
+            </div>
+            <!-- <div class="volume-slider">
+              <div class="volume-percentage"></div>
+            </div> -->
+          </div>
         </div>
-        <ul class="play-list"></ul>
+
+        <div class="progress-container"></div>
+        <ul class="play-list">
+          Playlist:
+        </ul>
       </div>
       <div class="weather">
         <input

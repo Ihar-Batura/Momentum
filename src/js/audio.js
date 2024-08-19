@@ -64,6 +64,8 @@ function playAudio() {
   }
 }
 
+audio.addEventListener('ended', playNext) // после окончания песни запускает следующую!
+
 // отрисовка списка песен
 for (let i = 0; i < playList.length; i++) {
   let li = document.createElement('li')
@@ -71,3 +73,18 @@ for (let i = 0; i < playList.length; i++) {
   li.textContent = playList[i].title
   playListContainer.append(li)
 }
+
+//volume изменение значка при нажатии и отключение звука
+const volumeBtn = document.querySelector('.volume-btn')
+
+volumeBtn.addEventListener('click', () => {
+  const volumeEl = volumeBtn.querySelector('.volume')
+  audio.muted = !audio.muted
+  if (audio.muted) {
+    volumeEl.classList.remove('icon-volume')
+    volumeEl.classList.add('icon-mute')
+  } else {
+    volumeEl.classList.add('icon-volume')
+    volumeEl.classList.remove('icon-mute')
+  }
+})
