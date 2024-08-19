@@ -3,7 +3,7 @@ import { showGreeting } from './greeting.js'
 const time = document.querySelector('.time')
 const calendar = document.querySelector('.date')
 
-export function showTime() {
+function showTime() {
   const date = new Date()
   const currentTime = date.toLocaleTimeString()
   time.textContent = `${currentTime}`
